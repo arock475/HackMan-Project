@@ -1,8 +1,10 @@
 # HackMan-Project
-A coding project modeled on the Clemson CPSC Hackman competition
+Hackman is a coding project modeled on the Clemson CPSC Hackman competition
 
-In this project I am building a hangman game which in the future will use a custom API to get the word that is being guessed
+Hackman is based on the childhood game of hangman 
 
-Currently a list of words is used which will be randomly selected from
+Hangman is the game where there is a word to guess and the player guesses letters until they run out of guesses or they successfully guess the word
 
-Then you play hangman using the same rules as are used in the childhood game of hangman
+My rendition of hangman currently uses a list of words and randomly selects one from there
+
+In the future I plan to create my own API in order to randomly output a word to the game
