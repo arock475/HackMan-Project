@@ -8,22 +8,23 @@ from RandWord import *
 # my theme is going to be hacking a server, we are finding the password by playing hangman
 # so to do this basically want a black screen with green letters
 # global variables to simplify things
-print_incorrect = ["\n+---+\n    |\n    |\n    |\n   ===", "\n+---+\nO   |\n    |\n    |\n   ===",
-                   "\n+---+\nO   |\n|   |\n    |\n   ===", "\n+---+\nO   |\n/|  |\n    |\n   ===",
-                   "\n+---+\nO   |\n/|\ |\n    |\n   ===", "\n+---+\nO   |\n/|\ |\n/   |\n   ===",
-                   "\n+---+\nO   |\n/|\ |\n/ \ |\n   ==="]
+print_incorrect = ["\n +---+\n     |\n     |\n     |\n    ===", "\n +---+\n O   |\n     |\n     |\n    ===",
+                   "\n +---+\n O   |\n |   |\n     |\n    ===", "\n +---+\n O   |\n/|   |\n     |\n    ===",
+                   "\n +---+\n O   |\n/|\  |\n     |\n    ===", "\n +---+\n O   |\n/|\  |\n/    |\n    ===",
+                   "\n +---+\n O   |\n/|\  |\n/ \  |\n    ==="]
 guessed_letters = []
 # Gets the word using the current functionality to choose a random word
-word = rand_word()
+temp = rand_word()
+word = temp.strip()
 size = len(word)
 
 
 # prints the letters that have been guessed and the blank spaces that still need to be guessed
-def print_after_guess(guessed_letters):
+def print_after_guess(guessed):
     i = 0
     correct = 0
     for char in word:
-        if char in guessed_letters:
+        if char in guessed:
             print(word[i], end=" ")
             correct += 1
         else:
@@ -37,21 +38,23 @@ def hackman():
     # show the number of letters in the word to allow the player to start guessing
     for x in word:
         print("_", end=" ")
-    guess_count = 0
     incorrect = 0
-    letters_guessed = 0
+    correct_letters = 0
     while True:
         print(print_incorrect[incorrect])
         guessed_letters.append(input("Input a lowercase letter to guess\n"))
         inc = print_after_guess(guessed_letters)
-        if inc > 0:
-            letters_guessed += inc
+        if inc > correct_letters:
+            correct_letters = inc
             inc -= inc
         else:
             incorrect += 1
-        if letters_guessed == size:
+            if(incorrect == 6):
+                print(print_incorrect[incorrect])
+                print("YOU LOSE :(")
+                break
+        if correct_letters == size:
             print("YOU WIN!! :)")
-        guess_count += 1
 
 
 if __name__ == "__main__":
