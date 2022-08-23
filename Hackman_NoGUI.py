@@ -1,13 +1,6 @@
 from RandWord import *
 
-# tomorrow I need to work on splitting things into more functions
-# also need to get the letters that are guessed to be shown each time
-# also need to work on a gui
-# then an api
-# lots of things to do
-# my theme is going to be hacking a server, we are finding the password by playing hangman
-# so to do this basically want a black screen with green letters
-# global variables to simplify things
+
 print_incorrect = ["\n +---+\n     |\n     |\n     |\n    ===", "\n +---+\n O   |\n     |\n     |\n    ===",
                    "\n +---+\n O   |\n |   |\n     |\n    ===", "\n +---+\n O   |\n/|   |\n     |\n    ===",
                    "\n +---+\n O   |\n/|\  |\n     |\n    ===", "\n +---+\n O   |\n/|\  |\n/    |\n    ===",
@@ -52,6 +45,7 @@ def hackman():
             if(incorrect == 6):
                 print(print_incorrect[incorrect])
                 print("YOU LOSE :(")
+                print(word)
                 break
         if correct_letters == size:
             print("YOU WIN!! :)")
