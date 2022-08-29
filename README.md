@@ -7,4 +7,5 @@ This competition was to make a hangman game with a GUI
 I used this project as a method of practice and learning.
 In this project I began using Python again for the first time in years and I learned how to use the TKinter library in order to make a GUI
 
-In time I plan to learn how to make custom APIs in order to make an API that returns the word that my Hackman game utilizes
+This project has now been updated to get the word from a custom API that I created
+The API is being run from pythonanywhere and returns a random word for each game of hackman
