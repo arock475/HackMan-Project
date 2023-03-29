@@ -8,5 +8,5 @@
   * There is also a copy of my original code to choose a random word which has been replaced by a custom API hosted on pythonanywhere
 
 ## Why I Did it
-  *I used this project as a method of practice and learning.
+###I used this project as a method of practice and learning.
   *In this project I began using Python again for the first time in several years and I learned how to use the TKinter library in order to make a GUI
