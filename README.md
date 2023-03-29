@@ -9,4 +9,4 @@
 
 ## Why I Did it
 ### I used this project as a method of practice and learning.
-  *In this project I began using Python again for the first time in several years and I learned how to use the TKinter library in order to make a GUI
+  * In this project I began using Python again for the first time in several years and I learned how to use the TKinter library in order to make a GUI
